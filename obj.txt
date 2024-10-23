@@ -1,0 +1,10 @@
+Criar uma api para uma lista de afazeres
+deve conter (titulo, descricao,realziada?, e data)
+A api deve permitir:
+- listar toda a lista
+- atualizar 1 componete da lista
+- inserir 
+- deletar
+
+observação:
+deve conter teste unitario
