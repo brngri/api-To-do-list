@@ -11,7 +11,7 @@ import com.negri.bruno.todolist.repository.RepositoryTodo;
 @Service
 public class ServiceTodo {
 
-    public final RepositoryTodo repositoryTodo;
+    public RepositoryTodo repositoryTodo;
 
     public ServiceTodo(RepositoryTodo repositoryTodo){
         this.repositoryTodo = repositoryTodo;
@@ -28,7 +28,7 @@ public class ServiceTodo {
     }
 
     public List<EntityTodo> list(){
-        Sort sort = Sort.by("Date").descending();
+        Sort sort = Sort.by("data").descending();
         return repositoryTodo.findAll(sort);
     }
 
