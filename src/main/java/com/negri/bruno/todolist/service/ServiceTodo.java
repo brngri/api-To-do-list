@@ -2,7 +2,6 @@ package com.negri.bruno.todolist.service;
 
 import java.util.List;
 
-import org.apache.catalina.startup.ClassLoaderFactory.Repository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
