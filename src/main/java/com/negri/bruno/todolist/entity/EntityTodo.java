@@ -28,6 +28,7 @@ public class EntityTodo {
         this.data = data;
     }
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,4 +36,8 @@ public class EntityTodo {
     private String descricao;
     private boolean realizado;
     private LocalDate data;
+
+    public boolean getRealizado(){
+        return this.realizado;
+    }
 }
