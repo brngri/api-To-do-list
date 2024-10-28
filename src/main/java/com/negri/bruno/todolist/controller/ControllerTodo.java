@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.negri.bruno.todolist.entity.EntityTodo;
 import com.negri.bruno.todolist.service.ServiceTodo;
 
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,7 +33,7 @@ public class ControllerTodo {
     }
 
     @PostMapping
-    List<EntityTodo> create(@RequestBody EntityTodo todo){
+    List<EntityTodo> create(@RequestBody @Valid EntityTodo todo){
         return serviceTodo.create(todo);
     }
 
@@ -40,8 +42,9 @@ public class ControllerTodo {
         return serviceTodo.list();
     }
 
-    @PutMapping
-    List<EntityTodo> update(@RequestBody EntityTodo todo){
+    @PutMapping("{id}")
+    List<EntityTodo> update(@PathVariable Long id,@RequestBody @Valid EntityTodo todo){
+        todo.setId(id);
         return serviceTodo.update(todo);
     }
 
