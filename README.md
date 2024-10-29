@@ -12,7 +12,7 @@ Esta aplicação tem o objetivo de ser uma lista de tarefas, onde o usuário pod
 
 - **Linguagens**:  Java
 - **Frameworks**: Spring Boot
-- **Banco de Dados**: MySQL
+- **Banco de Dados**: MySQL e H2 (testes)
 - **Outras ferramentas**: Git e Postman
 
 ## Práticas Adotadas
